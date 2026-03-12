@@ -13,6 +13,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Store Inventory Management API");
+});
+
 app.use("/api", productRoutes);
 
 app.use(errorHandler);
